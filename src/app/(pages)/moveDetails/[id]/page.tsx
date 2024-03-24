@@ -19,7 +19,7 @@ export default async function page(props:any) {
         <div className='ml-5'>
             <h1 className=' text-black  dark:text-white '>{data.title}</h1>
             <p className=' text-black  dark:text-white'>{data.release_date} (<span>{(data.original_language.toUpperCase())}</span>) <span className='text-white'>.</span> {data.genres.map((item:number|string, index:number) => {
-      return <span className='pl-2 text-black  dark:text-white'>{data.genres[index].name}</span>
+      return <span key={index} className='pl-2 text-black  dark:text-white'>{data.genres[index].name}</span>
         })}</p>
             <h2 className='pt-4 text-black  dark:text-white'>Overview</h2>
             <p className=' mb-3 text-black dark:text-white'>{data.overview}</p>
