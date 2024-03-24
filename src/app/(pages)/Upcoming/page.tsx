@@ -11,7 +11,7 @@ export default async function page() {
          <div className='grid grid-cols-2 cursor-pointer gap-3 mt-4 mb-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 '>
          {data.results.map((item:number|string,index:number) =>{
 
-return <div>
+return <div key={index}>
 
 <Link href={`../moveDetails/${data.results[index].id}`}>
 <div className='border p-4 border-black'>

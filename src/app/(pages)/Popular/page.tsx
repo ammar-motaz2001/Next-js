@@ -18,7 +18,7 @@ export default async function page() {
         {data.results.map((item:number|string,index:number) =>{
        
 
-            return <div>
+            return <div key={index}>
 
                     <Link href={`../moveDetails/${data.results[index].id}`}>
                     <div className='border p-4 border-black'>
